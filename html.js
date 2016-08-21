@@ -23,11 +23,10 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         />
-        <head>
-          {head.title.toComponent()}
-          {head.meta.toComponent()}
-          {head.link.toComponent()}
-        </head>
+        {head.title.toComponent()}
+        {head.meta.toComponent()}
+        {head.link.toComponent()}
+
         {css}
       </head>
       <body className="landing-page">

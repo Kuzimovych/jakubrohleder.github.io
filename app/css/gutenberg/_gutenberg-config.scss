@@ -1,0 +1,53 @@
+/* Configuration
+   ========================================================================== */
+
+$edit-mode: true; // [ true / false ] - Enables/disables the grid toggle button.
+
+// Paragraph indenting
+$paragraph-indent: false; // [ true / false ]
+
+// Base sizes
+$base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
+$base-font-size-desktop: 112.5 !default; // In %. Used to calculate the desktop font size. Number only, no units.
+$line-height: 1.625;
+$line-height-desktop: 1.7;
+$max-width: 28; // Number only, no units. Gets converted to REMs and pixels.
+
+// Modular Scale
+$modular-scale: (
+  xxxl: 4.3,
+  xxl: 3.5,
+  xl: 3,
+  l: 2.5,
+  m: 2,
+  s: 1.6875,
+  xs: 1.4375,
+  xxs: 1.2,
+  xxxs: 1,
+  xxxxs: .8125
+) !default;
+
+// Colors
+$color-font-body: #222;
+$color-font-headings: $color-font-body;
+$color-font-light: #888;
+$color-font-figcaption: $color-font-body;
+
+/* Calculations
+   ========================================================================== */
+
+// Mobile base & leading
+$base: 16 * ($base-font-size / 100);
+$leading: round($base * $line-height);
+$leading-rem: $leading / $base;
+
+// Desktop base & leading
+$base-desktop: 16 * ($base-font-size-desktop / 100);
+$leading-desktop: round($base-desktop * $line-height-desktop);
+$leading-rem-desktop: $leading-desktop / $base-desktop;
+
+/* Font themes
+   ========================================================================== */
+
+$font-body: Lato, Helvetica, Arial, Sans-serif;
+$font-headings: Merriweather, Georgia, serif;

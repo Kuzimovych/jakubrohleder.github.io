@@ -25,10 +25,12 @@ export default function Template(props) {
   }
 
   return (
-    <div>
-      {header}
+    <article>
+      <header>
+        {header}
+      </header>
       {children}
-    </div>
+    </article>
   )
 }
 

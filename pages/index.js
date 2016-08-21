@@ -8,6 +8,7 @@ import include from 'underscore.string/include'
 import Helmet from 'react-helmet'
 
 import Bio from 'components/Bio'
+import 'css/typography.scss'
 
 export default function BlogIndex(props) {
   const { route } = props
