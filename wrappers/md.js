@@ -1,46 +1,31 @@
 import React from 'react'
-import moment from 'moment'
-import DocumentTitle from 'react-document-title'
-import ReadNext from '../components/ReadNext'
-import { rhythm } from 'utils/typography'
+import Helmet from 'react-helmet'
+import fecha from 'fecha'
 import { config } from 'config'
+import ReadNext from 'components/ReadNext'
 import Bio from 'components/Bio'
 
-import '../css/zenburn.css'
+export default function MarkdownWrapper(props) {
+  const { route } = props
+  const post = route.page.data
 
-class MarkdownWrapper extends React.Component {
-  render () {
-    const { route } = this.props
-    const post = route.page.data
-
-    return (
-      <DocumentTitle title={`${post.title} | ${config.blogTitle}`}>
-        <div className="markdown">
-          <h1 style={{marginTop: 0}}>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.body }} />
-          <em
-            style={{
-              display: 'block',
-              marginBottom: rhythm(2),
-            }}
-          >
-            Posted {moment(post.date).format('MMMM D, YYYY')}
-          </em>
-          <hr
-            style={{
-              marginBottom: rhythm(2),
-            }}
-          />
-          <ReadNext post={post} pages={route.pages} />
-          <Bio />
-        </div>
-      </DocumentTitle>
-    )
-  }
+  return (
+    <div>
+      <Helmet title={`${post.title} | ${config.blogTitle}`} />
+      <div className="markdown">
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.body }} />
+        <em>
+          Posted {fecha.format(new Date(post.date), 'MMMM D, YYYY')}
+        </em>
+        <hr />
+        <ReadNext post={post} pages={route.pages} />
+        <Bio />
+      </div>
+    </div>
+  )
 }
 
 MarkdownWrapper.propTypes = {
   route: React.PropTypes.object,
 }
-
-export default MarkdownWrapper
