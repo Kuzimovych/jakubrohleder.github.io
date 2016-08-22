@@ -15,9 +15,11 @@ export default function MarkdownWrapper(props) {
       <div className="markdown">
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
-        <em>
-          Posted {fecha.format(new Date(post.date), 'MMMM D, YYYY')}
-        </em>
+        {post.date &&
+          <em>
+            Posted {fecha.format(new Date(post.date), 'MMMM D, YYYY')}
+          </em>
+        }
         <hr />
         <ReadNext post={post} pages={route.pages} />
         <Bio />

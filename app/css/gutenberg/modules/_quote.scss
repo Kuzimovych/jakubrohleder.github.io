@@ -1,13 +1,19 @@
+html.fonts-loaded blockquote > p {
+  font-family: $font-headings;
+}
+
 blockquote {
   font-style: italic;
   padding-left: 1.4375rem;
-  font-family: $font-headings;
   // font-size: 95%;
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     padding-left: 2rem;
   }
 
+  > p {
+    font-family: $font-headings-base;
+  }
 }
 
 cite {

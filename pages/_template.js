@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
+import loadFonts from 'utils/dynamic-fonts-loader'
+
+loadFonts()
 
 export default function Template(props) {
   const { location, children } = props

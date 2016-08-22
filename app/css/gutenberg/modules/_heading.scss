@@ -99,7 +99,18 @@ h6 {
   h4,
   h5,
   h6 {
-    font-family: $font-headings;
+    font-family: $font-headings-base;
+  }
+
+  html.fonts-loaded {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $font-headings;
+    }
   }
 }
 

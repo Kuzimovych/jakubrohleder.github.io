@@ -3,17 +3,26 @@ pre {
   overflow: auto;
 }
 
-// Address odd `em`-unit font size rendering in all browsers.
+html.fonts-loaded {
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: $font-code;
+  }
+}
+
 code,
 kbd,
 pre,
 samp {
-  font-family: Monaco, Consolas, Menlo, monospace;
+  font-family: $font-code-base;
 }
 
 code {
   @include padding-equal(1);
   overflow: scroll;
+  font-size: 90%;
 
   display: block;
 

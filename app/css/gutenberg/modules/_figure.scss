@@ -1,6 +1,10 @@
+html.fonts-loaded figcaption {
+  font-family: $font-headings;
+}
+
 figcaption {
   @include line-height(1);
-  font-family: $font-headings;
+  font-family: $font-headings-base;
   color: $color-font-figcaption;
   display: block;
   font-size: .8125rem;

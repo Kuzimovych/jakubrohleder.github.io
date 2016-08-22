@@ -17,18 +17,21 @@ html {
   box-sizing: border-box;
   font-size: #{$base + 'px'};
   font-size: #{$base-font-size + '%'};
-  font-family: $font-body;
   color: $color-font-body;
+  font-family: $font-body-base;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     font-size: #{$base-desktop + 'px'};
     font-size: #{$base-font-size-desktop / 100 + 'rem'};
   }
+}
 
+html.fonts-loaded{
+  font-family: $font-body;
 }
 
 // Line-height & margin reset

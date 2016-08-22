@@ -1,20 +1,4 @@
 @font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/merriweather-bold-webfont.woff2') format('woff2'),
-     url('./fonts/merriweather-bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/merriweather-italic-webfont.woff2') format('woff2'),
-     url('./fonts/merriweather-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
   font-family: 'Lato';
   src: url('./fonts/lato-bold-webfont.woff2') format('woff2'),
      url('./fonts/lato-bold-webfont.woff') format('woff');
@@ -30,8 +14,25 @@
   font-style: normal;
 }
 
+
 @font-face {
-  font-family: 'monacoregular';
+    font-family: 'Bitter';
+    src: url('./fonts/bitter-bold-webfont.woff2') format('woff2'),
+         url('./fonts/bitter-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('./fonts/bitter-italic-webfont.woff2') format('woff2'),
+         url('./fonts/bitter-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Monaco';
   src: url('./fonts/monaco-webfont.woff2') format('woff2'),
     url('./fonts/monaco-webfont.woff') format('woff');
   font-weight: normal;
